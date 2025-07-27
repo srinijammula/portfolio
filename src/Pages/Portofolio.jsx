@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback } from "react";
 
 import { supabase } from "../supabase"; 
 
+
 import PropTypes from "prop-types";
 import SwipeableViews from "react-swipeable-views";
 import { useTheme } from "@mui/material/styles";
@@ -104,19 +105,40 @@ function a11yProps(index) {
 
 // techStacks tetap sama
 const techStacks = [
-  { icon: "html.svg", language: "HTML" },
-  { icon: "css.svg", language: "CSS" },
+  // Core Languages
+  { icon: "Python.svg", language: "Python" },
+  { icon: "Java.svg", language: "Java" },
   { icon: "javascript.svg", language: "JavaScript" },
-  { icon: "tailwind.svg", language: "Tailwind CSS" },
-  { icon: "reactjs.svg", language: "ReactJS" },
-  { icon: "vite.svg", language: "Vite" },
-  { icon: "nodejs.svg", language: "Node JS" },
-  { icon: "bootstrap.svg", language: "Bootstrap" },
-  { icon: "firebase.svg", language: "Firebase" },
-  { icon: "MUI.svg", language: "Material UI" },
-  { icon: "vercel.svg", language: "Vercel" },
-  { icon: "SweetAlert.svg", language: "SweetAlert2" },
+  { icon:"C.svg", language: "C" },
+  { icon:"css.svg", language: "CSS" },
+  { icon:"html.svg", language: "HTML" },
+  { icon:"C++-(CPlusPlus).svg", language: "C++" },
+
+  // Backend & Frameworks
+  { icon: "nodejs.svg", language: "Node.js" },
+  { icon: "reactjs.svg", language: "React.js" },
+  { icon:"Redux.svg", language: "Redux" },
+  { icon:"AngularJS.svg", language: "Angular" },
+  { icon:"tailwind.svg", language: "tailwind" },
+  { icon:"Flask.svg", language: "Flask" },
+  { icon:"Express.svg", language: "Express.js" },
+  { icon:"Spring.svg", language: "Spring.js" },
+
+  // Databases
+  { icon: "MySQL.svg", language: "MySQL" },
+  { icon: "PostgresSQL.svg", language: "PostgreSQL" },
+  { icon: "MongoDB.svg", language: "MongoDB" },
+
+  // Cloud & DevOps
+  { icon: "AWS.svg", language: "AWS" },
+  { icon: "Docker.svg", language: "Docker" },
+  { icon: "Kubernetes.svg", language: "Kubernetes" },
+
+  // Tools
+  { icon: "Git.svg", language: "Git" },
+  { icon: "Jira.svg", language: "Jira" },
 ];
+
 
 export default function FullWidthTabs() {
   const theme = useTheme();
@@ -153,6 +175,9 @@ export default function FullWidthTabs() {
 
       setProjects(projectData);
       setCertificates(certificateData);
+      console.log("Fetched Projects:", projectData);
+      console.log("Fetched Certificates:", certificateData);
+
 
       // Store in localStorage (fungsionalitas ini tetap dipertahankan)
       localStorage.setItem("projects", JSON.stringify(projectData));
