@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, memo } from "react"
-import { Github, Linkedin, Mail, ExternalLink, Instagram, Sparkles } from "lucide-react"
+import { Github, Linkedin, Mail, ExternalLink, CodeXml, Sparkles } from "lucide-react"
 import { DotLottieReact } from '@lottiefiles/dotlottie-react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -25,14 +25,14 @@ const MainTitle = memo(() => (
       <span className="relative inline-block">
         <span className="absolute -inset-2 bg-gradient-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20"></span>
         <span className="relative bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
-          Full Stack
+          Software
         </span>
       </span>
       <br />
       <span className="relative inline-block mt-2">
         <span className="absolute -inset-2 bg-gradient-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20"></span>
         <span className="relative bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">
-          Developer
+          Engineer
         </span>
       </span>
     </h1>
@@ -78,11 +78,12 @@ const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
 const WORDS = ["Actively Looking for fulltime opportunities", "Tech Enthusiast"];
-const TECH_STACK = ["React", "Java", "Spring", "AI and ML"];
+const TECH_STACK = ["React", "Java", "Python", "Cloud", "AI and ML"];
 const SOCIAL_LINKS = [
-  { icon: Github, link: "https://github.com/SaiVamshiKatkuri" },
-  { icon: Linkedin, link: "https://www.linkedin.com/in/saivamshikatkuri/" },
-  { icon: Instagram, link: "https://www.instagram.com/vamshi__katkuri?igsh=bjZheGJvdzhzdnFu&utm_source=qr" }
+  { icon: Github, link: "https://github.com/srinijammula" },
+  { icon: Linkedin, link: "https://www.linkedin.com/in/srini-jammula/" },
+  { icon: CodeXml, link: "https://leetcode.com/srinijammula/", label: "LeetCode" }
+  
 ];
 
 const Home = () => {
@@ -168,7 +169,7 @@ const Home = () => {
               data-aos="fade-right"
               data-aos-delay="200">
               <div className="space-y-4 sm:space-y-6">
-                <StatusBadge />
+                {/* <StatusBadge /> */}
                 <MainTitle />
 
                 {/* Typing Effect */}
@@ -183,7 +184,7 @@ const Home = () => {
                 <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light"
                   data-aos="fade-up"
                   data-aos-delay="1000">
-                 Crafting modern, scalable, and intuitive web experiences that solve real-world problems with clean code and creative design.
+                 Crafting modern, scalable, and intuitive engineering solutions that solve real-world problems with clean code and creative design.
                 </p>
 
                 {/* Tech Stack */}
@@ -195,7 +196,7 @@ const Home = () => {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-row gap-3 w-full justify-start" data-aos="fade-up" data-aos-delay="1400">
-                  <CTAButton href="#Portofolio" text="Projects" icon={ExternalLink} />
+                  <CTAButton href="#Portfolio" text="Projects" icon={ExternalLink} />
                   <CTAButton href="#Contact" text="Contact" icon={Mail} />
                 </div>
 

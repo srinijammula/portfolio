@@ -118,10 +118,9 @@ const AboutPage = () => {
     const storedProjects = JSON.parse(localStorage.getItem("projects") || "[]");
     const storedCertificates = JSON.parse(localStorage.getItem("certificates") || "[]");
     
-    const startDate = new Date("2021-11-06");
+    const startDate = new Date("2022-08-30");
     const today = new Date();
-    const experience = today.getFullYear() - startDate.getFullYear() -
-      (today < new Date(today.getFullYear(), startDate.getMonth(), startDate.getDate()) ? 1 : 0);
+    const experience = 1;
 
     return {
       totalProjects: storedProjects.length,
@@ -165,6 +164,14 @@ const AboutPage = () => {
       animation: "fade-right",
     },
     {
+      icon: Globe,
+      color: "from-[#6366f1] to-[#a855f7]",
+      value: YearExperience,
+      label: "Research Papers",
+      description: "Continuous learning journey",
+      animation: "fade-left",
+    },
+    {
       icon: Award,
       color: "from-[#a855f7] to-[#6366f1]",
       value: totalCertificates,
@@ -172,15 +179,7 @@ const AboutPage = () => {
       description: "Professional skills validated",
       animation: "fade-up",
     },
-    {
-      icon: Globe,
-      color: "from-[#6366f1] to-[#a855f7]",
-      value: YearExperience,
-      label: "Years of Experience",
-      description: "Continuous learning journey",
-      animation: "fade-left",
-    },
-  ], [totalProjects, totalCertificates, YearExperience]);
+  ], [totalProjects, YearExperience, totalCertificates ]);
 
   return (
     <div
@@ -205,7 +204,7 @@ const AboutPage = () => {
                 data-aos="fade-right"
                 data-aos-duration="1300"
               >
-               Sai Vamshi Katkuri
+               Srini Jammula
               </span>
             </h2>
             
@@ -214,7 +213,7 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-            A Computer Science graduate and passionate full-stack developer with expertise in React, Java, and Spring Boot. I love building scalable, user-friendly web applications that blend clean code with creative design. My focus is on crafting engaging digital experiences while delivering reliable, high-quality solutions for every project.
+            I'm a Software Engineer with hands-on experience in full-stack development, cloud infrastructure, and AI-driven applications. I’ve built and deployed scalable systems using technologies like React, Java, Python, Spring Boot, AWS, and Kubernetes. My work spans across open-source contributions, research projects, and industry experience, including collaborations with NASA and nonprofit organizations like Saayam For All. I’m passionate about turning complex problems into reliable, high-impact solutions.
             </p>
 
                {/* Quote Section */}
@@ -235,12 +234,12 @@ const AboutPage = () => {
         </div>
         
         <blockquote className="text-gray-300 text-center lg:text-left italic font-medium text-sm relative z-10 pl-6">
-          "Leveraging AI as a professional tool, not a replacement."
+          Code is like humor. When you have to explain it, it's bad.
         </blockquote>
       </div>
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
-              <a href="https://drive.google.com/file/d/17ZglX9ZAJ5GG0JYfslen8BfyrK3VwYWE/view?usp=sharing" className="w-full lg:w-auto">
+              <a href="https://github.com/srinijammula/resume/blob/main/Srini_Jammula_Resume.pdf" className="w-full lg:w-auto">
               <button 
                 data-aos="fade-up"
                 data-aos-duration="800"
@@ -249,7 +248,7 @@ const AboutPage = () => {
                 <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Download CV
               </button>
               </a>
-              <a href="#Portofolio" className="w-full lg:w-auto">
+              <a href="#Portfolio" className="w-full lg:w-auto">
               <button 
                 data-aos="fade-up"
                 data-aos-duration="1000"
@@ -264,10 +263,21 @@ const AboutPage = () => {
           <ProfileImage />
         </div>
 
-        <a href="#Portofolio">
+        <a href="#Portfolio">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 cursor-pointer">
-            {statsData.map((stat) => (
-              <StatCard key={stat.label} {...stat} />
+           {statsData.map((stat) => (
+              stat.label === "Research Papers" ? (
+                <a
+                  key={stat.label}
+                  href="https://novapublishers.com/shop/information-and-knowledge-systems/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <StatCard {...stat} />
+                </a>
+              ) : (
+                <StatCard key={stat.label} {...stat} />
+              )
             ))}
           </div>
         </a>

@@ -109,10 +109,14 @@ const techStacks = [
   { icon: "Python.svg", language: "Python" },
   { icon: "Java.svg", language: "Java" },
   { icon: "javascript.svg", language: "JavaScript" },
+  { icon: "TypeScript.svg", language: "TypeScript" },
   { icon:"C.svg", language: "C" },
+  { icon:"C++-(CPlusPlus).svg", language: "C++" },
   { icon:"css.svg", language: "CSS" },
   { icon:"html.svg", language: "HTML" },
-  { icon:"C++-(CPlusPlus).svg", language: "C++" },
+  { icon: "rLogo.svg", language: "R" },
+  { icon: "sql.svg", language: "SQL" },
+  { icon: "xml.svg", language: "XML" },
 
   // Backend & Frameworks
   { icon: "nodejs.svg", language: "Node.js" },
@@ -120,8 +124,8 @@ const techStacks = [
   { icon:"Redux.svg", language: "Redux" },
   { icon:"AngularJS.svg", language: "Angular" },
   { icon:"tailwind.svg", language: "tailwind" },
-  { icon:"Flask.svg", language: "Flask" },
   { icon:"Express.svg", language: "Express.js" },
+   { icon:"firebase.svg", language: "Firebase" },
   { icon:"Spring.svg", language: "Spring.js" },
 
   // Databases
@@ -131,12 +135,18 @@ const techStacks = [
 
   // Cloud & DevOps
   { icon: "AWS.svg", language: "AWS" },
+  { icon: "gcp.svg", language: "GCP" },
+  { icon: "azure.svg", language: "Azure" },
   { icon: "Docker.svg", language: "Docker" },
   { icon: "Kubernetes.svg", language: "Kubernetes" },
 
   // Tools
   { icon: "Git.svg", language: "Git" },
-  { icon: "Jira.svg", language: "Jira" },
+  { icon: "VisualStudio.svg", language: "VisualStudio" },
+  { icon: "IntelliJ.svg", language: "IntelliJ" },
+  { icon: "Colab.svg", language: "GoogleColab" },
+  { icon: "INFA.svg", language: "Informatica" },
+  { icon: "Linux.svg", language: "Linux" }
 ];
 
 
@@ -217,9 +227,9 @@ export default function FullWidthTabs() {
   const displayedProjects = showAllProjects ? projects : projects.slice(0, initialItems);
   const displayedCertificates = showAllCertificates ? certificates : certificates.slice(0, initialItems);
 
-  // Sisa dari komponen (return statement) tidak ada perubahan
+  
   return (
-    <div className="md:px-[10%] px-[5%] w-full sm:mt-0 mt-[3rem] bg-[#030014] overflow-hidden" id="Portofolio">
+    <div className="md:px-[10%] px-[5%] pt-[5%] w-full sm:mt-0 mt-[3rem] bg-[#030014] overflow-hidden" id="Portfolio">
       {/* Header section - unchanged */}
       <div className="text-center pb-10" data-aos="fade-up" data-aos-duration="1000">
         <h2 className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">
@@ -370,7 +380,11 @@ export default function FullWidthTabs() {
                     data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
                     data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
                   >
-                    <Certificate ImgSertif={certificate.Img} />
+                    <Certificate
+                      name={certificate.Name}
+                      link={certificate.Link}
+                      ImgSertif={certificate.Img}
+                    />
                   </div>
                 ))}
               </div>

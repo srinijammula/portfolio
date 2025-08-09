@@ -6,7 +6,7 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
   // Handle kasus ketika ProjectLink kosong
   const handleLiveDemo = (e) => {
     if (!ProjectLink) {
-      console.log("ProjectLink kosong");
+      console.log("ProjectLink empty");
       e.preventDefault();
       alert("Live demo link is not available");
     }
@@ -14,7 +14,7 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
   
   const handleDetails = (e) => {
     if (!id) {
-      console.log("ID kosong");
+      console.log("ID empty");
       e.preventDefault();
       alert("Project details are not available");
     }
@@ -32,7 +32,7 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
             <img
               src={Img}
               alt={Title}
-              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+              className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500"
             />
           </div>
           
@@ -54,7 +54,7 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
                   onClick={handleLiveDemo}
                   className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-200"
                 >
-                  <span className="text-sm font-medium">Live Demo</span>
+                  <span className="text-sm font-medium">Code</span>
                   <ExternalLink className="w-4 h-4" />
                 </a>
               ) : (

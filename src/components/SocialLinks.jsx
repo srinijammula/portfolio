@@ -15,7 +15,7 @@
 //     displayName: "Let's Connect",
 //     subText: "on LinkedIn",
 //     icon: Linkedin,
-//     url: "https://www.linkedin.com/in/saivamshikatkuri/",
+//     url: "https://www.linkedin.com/in/srinijammula/",
 //     color: "#0A66C2",
 //     gradient: "from-[#0A66C2] to-[#0077B5]",
 //     isPrimary: true,
@@ -41,9 +41,9 @@
 //   {
 //     name: "GitHub",
 //     displayName: "Github",
-//     subText: "@SaiVamshiKatkuri",
+//     subText: "@srinijammula",
 //     icon: Github,
-//     url: "https://github.com/SaiVamshiKatkuri",
+//     url: "https://github.com/srinijammula",
 //     color: "#ffffff",
 //     gradient: "from-[#333] to-[#24292e]",
 //   },
@@ -318,7 +318,7 @@ const socialLinks = [
     displayName: "Let's Connect",
     subText: "on LinkedIn",
     icon: Linkedin,
-    url: "https://www.linkedin.com/in/saivamshikatkuri/",
+    url: "https://www.linkedin.com/in/srini-jammula/",
     color: "#0A66C2",
     gradient: "from-[#0A66C2] to-[#0077B5]",
     isPrimary: true,
@@ -328,16 +328,16 @@ const socialLinks = [
     displayName: "Instagram",
     subText: "@vamshi__katkuri",
     icon: Instagram,
-    url: "https://www.instagram.com/vamshi__katkuri?igsh=bjZheGJvdzhzdnFu&utm_source=qr",
+    url: "https://www.instagram.com",
     color: "#E4405F",
     gradient: "from-[#833AB4] via-[#E4405F] to-[#FCAF45]",
   },
   {
     name: "GitHub",
     displayName: "Github",
-    subText: "@SaiVamshiKatkuri",
+    subText: "@SriniJammula",
     icon: Github,
-    url: "https://github.com/SaiVamshiKatkuri",
+    url: "https://github.com/srinijammula",
     color: "#ffffff",
     gradient: "from-[#333] to-[#24292e]",
   },
@@ -408,8 +408,8 @@ const SocialLinks = () => {
         </a>
 
         {/* Second Row - Instagram & GitHub */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {[instagram, github].map((link, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
+          {[github].map((link, index) => (
             <a
               key={link.name}
               href={link.url}

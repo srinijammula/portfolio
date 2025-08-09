@@ -5,13 +5,14 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import AnimatedBackground from "./components/Background";
 import Navbar from "./components/Navbar";
-import Portofolio from "./Pages/Portofolio";
+import Portfolio from "./Pages/Portfolio";
 import ContactPage from "./Pages/Contact";
 import ProjectDetails from "./components/ProjectDetail";
 import WelcomeScreen from "./Pages/WelcomeScreen";
 import { AnimatePresence } from 'framer-motion';
 import notfound from "./Pages/404";
 import NotFoundPage from "./Pages/404";
+import Experience from "./Pages/Experience";
 
 const LandingPage = ({ showWelcome, setShowWelcome }) => {
   return (
@@ -28,7 +29,8 @@ const LandingPage = ({ showWelcome, setShowWelcome }) => {
           <AnimatedBackground />
           <Home />
           <About />
-          <Portofolio />
+          <Experience />
+          <Portfolio />
           <ContactPage />
           
         </>
