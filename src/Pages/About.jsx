@@ -213,7 +213,7 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-            I'm a Software Engineer with hands-on experience in full-stack development, cloud infrastructure, and AI-driven applications. I’ve built and deployed scalable systems using technologies like React, Java, Python, Spring Boot, AWS, and Kubernetes. My work spans across open-source contributions, research projects, and industry experience, including collaborations with NASA and nonprofit organizations like Saayam For All. I’m passionate about turning complex problems into reliable, high-impact solutions.
+            I'm a Software Engineer with hands-on experience in full-stack development, cloud infrastructure, and AI-integrated applications. I’ve built and deployed scalable systems using technologies spanning React, Java, Python, Spring Boot, AWS, and Kubernetes. My work spans across open-source contributions, research projects, and industry experience, including collaborations with NASA and nonprofit organizations like Saayam For All. I’m passionate about turning complex problems into reliable, high-impact solutions.
             </p>
 
                {/* Quote Section */}
